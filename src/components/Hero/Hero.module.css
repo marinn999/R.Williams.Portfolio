@@ -1,0 +1,102 @@
+/* ========================== MOBILE HERO STYLES======================== */
+
+/* .img {
+  max-width: 360px;
+} */
+
+.hero {
+  background-color: #000000;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px 20px;
+}
+
+.title {
+  width: 320px;
+  color: var(--White, #fff);
+  font-family: Sen;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.titleSpan {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.text {
+  width: 320px;
+  color: var(--White, #fff);
+  font-family: Sen;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* ========================== /MOBILE HERO STYLES======================== */
+
+/* ========================== TABLET HERO STYLES======================== */
+@media screen and (min-width: 768px) {
+  /* .img {
+    max-width: 384px;
+  } */
+
+  .hero {
+    padding: 80px 40px 84px 0;
+    display: flex;
+  }
+
+  .container {
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 85px;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .title {
+    width: 408px;
+    font-size: 56px;
+  }
+
+  .text {
+    width: 408px;
+  }
+}
+
+/* ========================== /TABLET HERO STYLES======================== */
+
+/* ========================== DESKTOP HERO STYLES======================== */
+@media screen and (min-width: 1158px) {
+  /* .img {
+    width: 100%;
+  } */
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../Header/img/header.webp);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .container {
+    margin-left: 662px;
+    margin-top: 141px;
+  }
+
+  .title {
+    width: 738px;
+    font-size: 78px;
+  }
+
+  .text {
+    width: 738px;
+  }
+}
