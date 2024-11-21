@@ -1,16 +1,16 @@
 /* ==========================  ICONS MOBILE STYLES ========================== */
-.icons-section {
+.section {
   background-color: #000000;
 }
 
-.icons-section-list {
+.list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.icons-section-list-item {
+.item {
   width: 180px;
   height: 140px;
   display: flex;
@@ -23,7 +23,7 @@
 
 /* ==========================  ICONS TABLET STYLES ========================== */
 @media screen and (min-width: 768px) {
-  .icons-section-list-item {
+  .item {
     width: 384px;
   }
 }
@@ -32,17 +32,17 @@
 
 /* ==========================  ICONS DESKTOP STYLES ========================== */
 @media screen and (min-width: 1158px) {
-  .icons-section {
+  .section {
     background-color: #000000;
     overflow-x: auto;
   }
 
-  .icons-section-list {
+  .list {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
 
-  .icons-section-list-item {
+  .item {
     flex-shrink: 0;
     width: 340px;
   }

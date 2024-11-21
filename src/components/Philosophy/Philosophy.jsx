@@ -1,18 +1,20 @@
+import s from "./Philosophy.module.css";
+
 const Philosophy = () => {
   return (
     <>
-      <section className="philosophy">
-        <div className="philosophy-text-div">
-          <div className="philosophy-text-without-link">
-            <h2 className="philosophy-title">Philosophy & values</h2>
-            <p className="philosophy-text">
+      <section className={s.section}>
+        <div className={s.textContainer}>
+          <div>
+            <h2 className={s.title}>Philosophy & values</h2>
+            <p className={s.text}>
               I think everyone wants the same thing - relationship with
               humanity, peace with the metaphysical, and experience with the
               universe. I try to grasp these things with my values:
               authenticity, creativity, & hospitality.
             </p>
           </div>
-          <a className="philosophy-link" href="#skillset">
+          <a className={s.link} href="#skillset">
             More about me
           </a>
         </div>

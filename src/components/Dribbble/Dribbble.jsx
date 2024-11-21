@@ -1,22 +1,20 @@
+import s from "./Dribbble.module.css";
+
 const Dribbble = () => {
   return (
     <>
-      <section className="dribbble-section">
-        <h2 className="dribbble-section-title">Dribbble</h2>
-        <p className="dribbble-section-text">
+      <section className={s.section}>
+        <h2 className={s.title}>Dribbble</h2>
+        <p className={s.text}>
           Each dribbble shot is made with love and care. Do check out my work on
           Dribbble. Likes and comments are appreciated.
         </p>
-        <a
-          className="dribbble-section-link"
-          href="https://dribbble.com"
-          target="_blank"
-        >
+        <a className={s.link} href="https://dribbble.com" target="_blank">
           Follow me on Dribbble
         </a>
-        <div className="dribble-img-container">
-          <svg className="dribble-section-icon" width="48" height="12">
-            <use href="../img/symbol-defs.svg#icon-11"></use>
+        <div className={s.imgContainer}>
+          <svg className={s.icon} width="48" height="12">
+            <use href="symbol-defs.svg#icon-11"></use>
           </svg>
           <img
             className="dribble-section-desktop-img"

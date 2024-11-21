@@ -1,18 +1,18 @@
 /* SKILLSET  */
 /* ==========================  SKILLSET MOBILE STYLES ======================== */
 
-.skillset-section {
+.section {
   background-color: #000000;
   padding: 78px 20px 64px 20px;
 }
 
-.skillset-div-left {
+.leftContainer {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.skillset-title {
+.title {
   color: #fff;
   font-family: Sen;
   font-size: 32px;
@@ -20,7 +20,7 @@
   line-height: normal;
 }
 
-.skillset-text {
+.text {
   color: var(--Light-Grey, #8491a0);
   font-family: Sen;
   font-size: 18px;
@@ -29,14 +29,14 @@
   width: 320px;
 }
 
-.skillset-list {
+.list {
   padding-top: 69px;
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
-.skillset-list-item-title {
+.itemTitle {
   color: var(--White, #fff);
   padding-top: 24px;
   padding-bottom: 12px;
@@ -47,7 +47,7 @@
   /* 36px */
 }
 
-.skillset-list-item-text {
+.itemText {
   color: var(--Light-Grey, #8491a0);
   width: 320px;
   font-family: Sen;
@@ -61,25 +61,25 @@
 
 /* ==========================  SKILLSET TABLET STYLES ======================== */
 @media screen and (min-width: 768px) {
-  .skillset-section {
+  .section {
     padding: 80px 40px;
   }
 
-  .skillset-div-left {
+  .leftContainer {
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
 
-  .skillset-title {
+  .title {
     font-size: 55px;
   }
 
-  .skillset-text {
+  .text {
     width: 688px;
   }
 
-  .skillset-list {
+  .list {
     padding-top: 48px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -87,7 +87,7 @@
     column-gap: 72px;
   }
 
-  .skillset-list-item-title {
+  .itemTitle {
     color: var(--White, #fff);
     padding-top: 24px;
     padding-bottom: 12px;
@@ -98,7 +98,7 @@
     /* 36px */
   }
 
-  .skillset-list-item-text {
+  .itemText {
     color: var(--Light-Grey, #8491a0);
     width: 284px;
     font-family: Sen;
@@ -113,7 +113,7 @@
 
 /* ==========================  SKILLSET DESKTOP STYLES ======================== */
 @media screen and (min-width: 1158px) {
-  .skillset-section {
+  .section {
     padding: 120px 72px;
     height: 664px;
     display: flex;
@@ -121,15 +121,15 @@
     gap: 48px;
   }
 
-  .skillset-text {
+  .text {
     width: 368px;
   }
 
-  .skillset-list {
+  .list {
     padding: 0;
   }
 
-  .skillset-list-item-text {
+  .itemText {
     width: 368px;
   }
 }

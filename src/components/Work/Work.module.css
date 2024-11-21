@@ -1,10 +1,10 @@
 /* ============= EXPERIENCE MOBILE STYLES =============== */
-.experience-section {
+.section {
   background-color: #000000;
   padding: 48px 20px;
 }
 
-.work-experience {
+.title {
   color: var(--Light-Grey, #8491a0);
   font-family: Sen;
   font-size: 16px;
@@ -14,7 +14,7 @@
   text-transform: uppercase;
 }
 
-.companies-experience {
+.companiesTitle {
   width: 320px;
   margin-top: 8px;
   margin-bottom: 40px;
@@ -26,13 +26,13 @@
   line-height: normal;
 }
 
-.companies-experience-list {
+.list {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.company-number {
+.companyNumber {
   width: 126px;
   color: #8491a0;
   font-family: Sen;
@@ -42,7 +42,7 @@
   line-height: normal;
 }
 
-.company-name {
+.companyName {
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 16px;
@@ -67,7 +67,7 @@
   color: var(--Pink_Accent, #e95d90);
 }
 
-.company-description {
+.companyDescription {
   width: 320px;
   color: var(--Light-Grey, #8491a0);
   font-family: Sen;
@@ -81,26 +81,26 @@
 
 /* ============= EXPERIENCE TABLET STYLES =============== */
 @media screen and (min-width: 768px) {
-  .experience-section {
+  .section {
     padding: 80px 40px;
   }
 
-  .companies-experience {
+  .companiesTitle {
     width: 688px;
     font-size: 55px;
   }
 
-  .companies-experience-list {
+  .list {
     flex-direction: row;
     gap: 40px;
   }
 
-  .company-name {
+  .companyName {
     width: 197px;
     margin-bottom: 24px;
   }
 
-  .company-description {
+  .companyDescription {
     width: 197px;
   }
 }
@@ -109,24 +109,24 @@
 
 /* ============= EXPERIENCE DESKTOP STYLES =============== */
 @media screen and (min-width: 1158px) {
-  .experience-section {
+  .section {
     padding: 120px 72px;
   }
 
-  .companies-experience {
+  .companiesTitle {
     width: 690px;
   }
 
-  .companies-experience-list {
+  .list {
     gap: 72px;
   }
 
-  .company-name {
+  .companyName {
     margin-bottom: 22px;
     width: 368px;
   }
 
-  .company-description {
+  .companyDescription {
     width: 368px;
   }
 }

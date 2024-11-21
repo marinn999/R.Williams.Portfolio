@@ -1,16 +1,18 @@
+import s from "./Instagram.module.css";
+
 const Instagram = () => {
   return (
     <>
-      <section className="insta-section">
-        <div className="insta-section-left">
-          <h2 className="insta-section-title">Instagram</h2>
-          <p className="insta-section-text">
+      <section className={s.section}>
+        <div className={s.leftContainer}>
+          <h2 className={s.title}>Instagram</h2>
+          <p className={s.text}>
             If you are a person who enjoys photography, then I highly recommend
             that you check out my Instagram. I’m an avid traveller and I capture
             the best moments that I would love to cherish with the world.
           </p>
           <a
-            className="insta-section-link"
+            className={s.link}
             href="https://www.instagram.com"
             target="_blank"
           >
