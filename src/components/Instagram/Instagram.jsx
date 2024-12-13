@@ -1,4 +1,5 @@
 import s from "./Instagram.module.css";
+import img from "./img/insta.webp";
 
 const Instagram = () => {
   return (
@@ -20,25 +21,12 @@ const Instagram = () => {
           </a>
         </div>
         <img
-          className="insta-section-desktop-img"
-          src="./img/desktop img/8/Rectangle 39.jpg"
-          alt="plane"
+          className={s.img}
+          src={img}
+          alt="Mountains"
+          loading="lazy"
           width="720"
           height="600"
-        />
-        <img
-          className="insta-section-tablet-img"
-          src="./img/tablet img/7/Rectangle 39.jpg"
-          alt="plane"
-          width="384"
-          height="600"
-        />
-        <img
-          className="insta-section-mobile-img"
-          src="./img/tablet img/7/Rectangle 39.jpg"
-          alt="plane"
-          width="360"
-          height="450"
         />
       </section>
     </>

@@ -7,16 +7,16 @@
   display: block;
 }
 
-.reviews-section {
+.section {
   background-color: #000000;
   padding: 48px 20px;
 }
 
-.reviews-section-left {
+.leftContainer {
   margin-bottom: 64px;
 }
 
-.reviews-section-title {
+.title {
   color: var(--White, #fff);
   width: 320px;
   font-family: Sen;
@@ -26,7 +26,7 @@
   line-height: normal;
 }
 
-.reviews-section-text {
+.text {
   color: var(--Light-Grey, #8491a0);
   width: 320px;
   margin-top: 16px;
@@ -39,7 +39,7 @@
   /* 27px */
 }
 
-.reviews-section-link {
+.link {
   color: var(--White, #fff);
   font-family: Sen;
   font-size: 16px;
@@ -54,19 +54,19 @@
   text-decoration-color: #fff;
 }
 
-.reviews-section-list {
+.list {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
-.reviews-section-list-item-text-div {
+.itemTextContainer {
   padding: 32px;
   width: 333px;
   border: 1px solid var(--Dark-Grey, #5b6876);
 }
 
-.reviews-section-list-item-text {
+.itemText {
   color: var(--White, #fff);
   width: 269px;
   font-family: Sen;
@@ -79,7 +79,7 @@
   margin-bottom: 64px;
 }
 
-.reviews-section-list-item-text-who {
+.itemTextWho {
   color: var(--Dark-Grey, #5b6876);
   font-family: Sen;
   font-size: 18px;
@@ -89,7 +89,7 @@
   /* 27px */
 }
 
-.reviews-section-list-item-text-company {
+.itemTextCompany {
   color: var(--Dark-Grey, #5b6876);
   font-family: Sen;
   font-size: 18px;
@@ -103,27 +103,27 @@
 
 /* =============================  Reviews TABLET STYLES ========================== */
 @media screen and (min-width: 768px) {
-  .reviews-section {
+  .section {
     display: flex;
     gap: 10px;
     padding: 80px 40px;
   }
 
-  .reviews-section-left {
+  .leftContainer {
     margin-bottom: 0;
   }
 
-  .reviews-section-title {
+  .title {
     width: 346px;
     font-size: 55px;
   }
 
-  .reviews-section-text {
+  .text {
     width: 332px;
     margin-top: 24px;
   }
 
-  .reviews-section-list {
+  .list {
     gap: 64px;
   }
 }
@@ -141,29 +141,29 @@
     display: none;
   }
 
-  .reviews-section {
+  .section {
     gap: 72px;
     padding: 120px 72px;
   }
 
-  .reviews-section-title {
+  .title {
     width: 588px;
   }
 
-  .reviews-section-text {
+  .text {
     width: 588px;
   }
 
-  .reviews-section-list {
+  .list {
     gap: 120px;
   }
 
-  .reviews-section-list-item-text-div {
+  .itemTextContainer {
     padding: 64px;
     width: 636px;
   }
 
-  .reviews-section-list-item-text {
+  .itemText {
     width: 508px;
     line-height: normal;
   }

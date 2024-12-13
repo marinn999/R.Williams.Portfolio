@@ -1,29 +1,21 @@
 /* ============= PHILOSOPHY MOBILE STYLES =============== */
-/* .philosophy-tablet-img, 
-.philosophy-desktop-img {
-    display: none;
+.img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
-.philosophy-mobile-img {
-width: 100%;
-} */
+
 .section {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .textContainer {
-  padding: 48px 20px;
+  padding: 48px 20px 0 20px;
   background-color: #fff3e4;
-  height: 450px;
-
-  /* display: flex;
-flex-direction: column;
-align-items: space-between; */
+  min-height: 350px;
 }
-
-/* .textContainer:last-child {
-    align-items: flex-end;
-    justify-content: end;
-} */
 
 .title {
   color: var(--Level-1, #181823);
@@ -51,7 +43,7 @@ align-items: space-between; */
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  margin-top: 100px;
+  margin-top: 30px;
   padding-bottom: 5px;
 }
 
@@ -69,24 +61,22 @@ align-items: space-between; */
 
 /* ============= PHILOSOPHY TABLET STYLES =============== */
 @media screen and (min-width: 768px) {
-  .philosophy-mobile-img,
-  .philosophy-desktop-img {
-    display: none;
-  }
-
-  .philosophy-tablet-img {
-    display: block;
-    width: 100%;
-  }
-
   .section {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
+  }
+
+  .img {
+    width: 50%;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .textContainer {
-    padding: 80px 40px;
-    height: 600px;
+    padding-top: 80px;
+    min-height: 600px;
+    width: 50%;
   }
 
   .title {
@@ -97,25 +87,19 @@ align-items: space-between; */
   .text {
     width: 304px;
   }
+  .link {
+    margin-top: 100px;
+  }
 }
 
 /* ============= /PHILOSOPHY TABLET STYLES =============== */
 
 /* ============= PHILOSOPHY DESKTOP STYLES =============== */
 @media screen and (min-width: 1158px) {
-  .philosophy-mobile-img,
-  .philosophy-tablet-img {
-    display: none;
-  }
-
-  .philosophy-desktop-img {
-    display: block;
-    width: 100%;
-  }
-
   .textContainer {
-    padding: 120px 72px;
-    width: 100%;
+    padding-top: 120px;
+    padding-left: 80px;
+    height: auto;
   }
 
   .title {
@@ -125,14 +109,6 @@ align-items: space-between; */
 
   .text {
     width: 576px;
+    line-height: 1.8;
   }
-
-  /* .philosophy-link::after {
-    content: '';
-    left: 0;
-    bottom: 10px;
-    background-color:  #8491A0;
-    width: 116px;
-    height: 1px;
-} */
 }

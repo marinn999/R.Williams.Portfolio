@@ -21,29 +21,13 @@
 
 /* ==========================  /ICONS MOBILE STYLES ========================== */
 
-/* ==========================  ICONS TABLET STYLES ========================== */
+/* ==========================  ICONS TABLET/DESKTOP STYLES ========================== */
 @media screen and (min-width: 768px) {
-  .item {
-    width: 384px;
-  }
-}
-
-/* ==========================  /ICONS TABLET STYLES ========================== */
-
-/* ==========================  ICONS DESKTOP STYLES ========================== */
-@media screen and (min-width: 1158px) {
-  .section {
-    background-color: #000000;
-    overflow-x: auto;
-  }
-
   .list {
-    flex-wrap: nowrap;
     justify-content: flex-start;
+    flex-wrap: nowrap;
   }
-
   .item {
-    flex-shrink: 0;
-    width: 340px;
+    width: calc(100vh / 6);
   }
 }

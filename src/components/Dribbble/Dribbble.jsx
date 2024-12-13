@@ -1,4 +1,5 @@
 import s from "./Dribbble.module.css";
+import img from "./img/img.webp";
 
 const Dribbble = () => {
   return (
@@ -17,25 +18,11 @@ const Dribbble = () => {
             <use href="symbol-defs.svg#icon-11"></use>
           </svg>
           <img
-            className="dribble-section-desktop-img"
-            src="./img/desktop img/9/Rectangle 42.jpg"
-            alt="laptop menu"
-            width="1076"
-            height="640"
-          ></img>
-          <img
-            className="dribble-section-tablet-img"
-            src="./img/tablet img/8/Rectangle 42.jpg"
-            alt="laptop menu"
-            width="688"
-            height="480"
-          ></img>
-          <img
-            className="dribble-section-mobile-img"
-            src="./img/mobile img/Rectangle 42.png"
-            alt="laptop menu"
-            width="320"
-            height="480"
+            className={s.img}
+            src={img}
+            alt="Man with tablet"
+            width="1000"
+            height="667"
           ></img>
         </div>
       </section>

@@ -1,11 +1,9 @@
 /* =============================  Insta MOBILE STYLES ========================== */
-.insta-section-tablet-img,
-.insta-section-desktop-img {
-  display: none;
-}
 
-.insta-section-mobile-img {
+.img {
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .leftContainer {
@@ -62,16 +60,6 @@
 
 /* =============================  Insta TABLET STYLES========================== */
 @media screen and (min-width: 768px) {
-  .insta-section-desktop-img,
-  .insta-section-mobile-img {
-    display: none;
-  }
-
-  .insta-section-tablet-img {
-    display: block;
-    width: 100%;
-  }
-
   .section {
     display: flex;
     flex-direction: row;
@@ -97,16 +85,6 @@
 
 /* =============================  Insta DESKTOP STYLES ========================== */
 @media screen and (min-width: 1158px) {
-  .insta-section-tablet-img,
-  .insta-section-mobile-img {
-    display: none;
-  }
-
-  .insta-section-desktop-img {
-    display: block;
-    width: 100%;
-  }
-
   .leftContainer {
     padding: 120px 72px;
   }

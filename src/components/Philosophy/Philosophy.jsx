@@ -1,4 +1,5 @@
 import s from "./Philosophy.module.css";
+import img from "./img/philosophy.webp";
 
 const Philosophy = () => {
   return (
@@ -19,26 +20,13 @@ const Philosophy = () => {
           </a>
         </div>
         <img
-          className="philosophy-mobile-img"
-          src="./img/mobile img/Rectangle 39.jpg"
-          alt="glass ball in hand"
+          className={s.img}
+          src={img}
+          alt="Plant in glass"
+          loading="lazy"
           width="360"
           height="450"
         />
-        <img
-          className="philosophy-tablet-img"
-          src="./img/tablet img/2/Rectangle 39.jpg"
-          alt="glass ball in hand"
-          width="384"
-          height="600"
-        />
-        <img
-          className="philosophy-desktop-img"
-          src="./img/desktop img/3/3.jpg"
-          alt="glass ball in hand"
-          width="720"
-          height="600"
-        ></img>
       </section>
     </>
   );

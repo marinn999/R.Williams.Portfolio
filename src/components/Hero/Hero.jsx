@@ -4,7 +4,7 @@ import heroImg from "./img/hero.webp";
 const Hero = () => {
   return (
     <>
-      <section className={s.hero} id="section-hero">
+      <section className={s.section} id="section-hero">
         <img
           className={s.img}
           src={heroImg}

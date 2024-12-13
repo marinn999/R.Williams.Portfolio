@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Dribbble from "./components/Dribbble/Dribbble";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Instagram from "./components/Instagram/Instagram";
@@ -12,6 +14,9 @@ import SkillsetIcons from "./components/SkillsetIcons/SkillsetIcons";
 import { Work } from "./components/Work/Work";
 
 function App() {
+  const handleSubmitForm = (values) => {
+    console.log("Form values:", values);
+  };
   return (
     <>
       <Header />
@@ -25,7 +30,8 @@ function App() {
       <Dribbble />
       <Reviews />
       <Photography />
-      <LetsGetStarted />
+      <LetsGetStarted handleSubmitForm={handleSubmitForm} />
+      <Footer />
     </>
   );
 }

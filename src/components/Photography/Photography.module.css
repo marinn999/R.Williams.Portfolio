@@ -1,10 +1,10 @@
 /* =============================  PHOTOGRAPHY MOBILE STYLES ========================== */
-.photography-section {
+.section {
   background-color: #000000;
   padding: 48px 20px;
 }
 
-.photography-section-title {
+.title {
   color: var(--White, #fff);
   font-family: Sen;
   font-size: 32px;
@@ -13,7 +13,7 @@
   line-height: normal;
 }
 
-.photography-section-text {
+.text {
   color: var(--Light-Grey, #8491a0);
   width: 320px;
   margin-top: 24px;
@@ -26,13 +26,13 @@
   /* 27px */
 }
 
-.photography-section-buttons {
+.buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
-.photography-section-btn {
+.btn {
   display: flex;
   width: 148px;
   padding: 12px 16px;
@@ -50,18 +50,18 @@
   background-color: transparent;
 }
 
-.photography-section-btn:first-child {
+.btn:first-child {
   border: 1px solid var(--Purple, #5221e6);
   background: var(--Purple, #5221e6);
 }
 
-.photography-section-btn:focus,
-.photography-section-btn:hover {
+.btn:focus,
+.btn:hover {
   border: 1px solid var(--Purple, #5221e6);
   background: var(--Purple, #5221e6);
 }
 
-.photography-section-images {
+.imgs {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -72,25 +72,25 @@
 
 /* =============================  PHOTOGRAPHY TABLET STYLES ========================== */
 @media screen and (min-width: 768px) {
-  .photography-section {
+  .section {
     padding: 80px 40px;
   }
 
-  .photography-section-title {
+  .title {
     font-size: 55px;
   }
 
-  .photography-section-text {
+  .text {
     width: 689px;
     margin-bottom: 64px;
   }
 
-  .photography-section-images {
+  .imgs {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .photography-section-btn {
+  .btn {
     width: normal;
   }
 }
@@ -99,15 +99,15 @@
 
 /* =============================  PHOTOGRAPHY DESKTOP STYLES ========================== */
 @media screen and (min-width: 1158px) {
-  .photography-section {
+  .section {
     padding: 120px 72px;
   }
 
-  .photography-section-text {
+  .text {
     width: 588px;
   }
 
-  .photography-section-images {
+  .imgs {
     flex-wrap: nowrap;
   }
 }
