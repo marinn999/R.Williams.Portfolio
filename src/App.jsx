@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Dribbble from "./components/Dribbble/Dribbble";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
