@@ -1,33 +1,27 @@
-/* ==========================  ICONS MOBILE STYLES ========================== */
 .section {
-  background-color: #000000;
+  background-color: #000;
+  overflow: hidden; /* Ховаємо зайві елементи */
+  position: relative;
+  width: 100%;
+  height: 140px;
 }
 
 .list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: relative;
 }
 
 .item {
-  width: 180px;
-  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--Level-1, #181823);
+  flex-shrink: 0;
+  width: 200px;
+  height: 140px;
 }
 
-/* ==========================  /ICONS MOBILE STYLES ========================== */
-
-/* ==========================  ICONS TABLET/DESKTOP STYLES ========================== */
-@media screen and (min-width: 768px) {
-  .list {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
-  .item {
-    width: calc(100vh / 6);
-  }
+.icon {
+  fill: white;
 }
