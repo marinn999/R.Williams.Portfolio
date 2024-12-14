@@ -1,4 +1,3 @@
-import Dribbble from "./components/Dribbble/Dribbble";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -26,7 +25,6 @@ function App() {
       <SkillsetIcons />
       <Projects />
       <Instagram />
-      <Dribbble />
       <Reviews />
       <Photography />
       <LetsGetStarted handleSubmitForm={handleSubmitForm} />

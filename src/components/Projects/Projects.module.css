@@ -101,3 +101,108 @@ btn:focus,
 btn:active {
   background-color: #5221e6;
 }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(92, 89, 89);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+.modalList {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: scroll;
+  padding-bottom: 10px;
+}
+.modalItem {
+  flex: 0 0 auto; /* Елементи мають постійну ширину */
+  width: 300px;
+  min-height: 300px;
+  background: #2f2929c7;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content: center;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.modalImg {
+  margin: auto;
+  height: 250px;
+}
+.modalTitle {
+  font-family: Sen, sans-serif;
+  font-size: 26px;
+  color: #ccc;
+  text-align: center;
+  padding-bottom: 10px;
+  position: relative;
+}
+.modalTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #5221e6;
+}
+.modalText {
+  font-family: Sen, sans-serif;
+  font-size: 18px;
+  color: #ccc;
+  text-align: center;
+  padding-top: 20px;
+}
+.modalList::-webkit-scrollbar {
+  height: 10px;
+  background-color: #5221e6; /* Колір фону скролбару */
+}
+
+.modalList::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Колір кнопки скролу */
+  border-radius: 5px;
+}
+
+.modalList::-webkit-scrollbar-thumb::after {
+  content: "→";
+  display: block;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+
+.btnClose {
+  margin-top: 20px;
+  background: #5221e6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btnClose:hover,
+.btnClose:focus,
+.btnClose:active {
+  color: #5221e6;
+  background: white;
+}

@@ -1,22 +1,73 @@
-// import { useState } from "react";
+import { useState } from "react";
 import s from "./Projects.module.css";
 import img1 from "./img/work1.webp";
 import img2 from "./img/work2.webp";
 import img3 from "./img/work3.webp";
 import img4 from "./img/work4.webp";
-// import Modal from "react-modal";
+import img5 from "./img/work5.webp";
+import img6 from "./img/work6.webp";
+import img7 from "./img/work7.webp";
+import Modal from "react-modal";
 
-// Modal.setAppElement("#root");
+Modal.setAppElement("#root");
 
 const Projects = () => {
-  // const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  // const openModal = () => {
-  //   setModalIsOpen(true);
-  // };
-  // const closeModal = () => {
-  //   setModalIsOpen(false);
-  // };
+  const projects = [
+    {
+      id: 1,
+      img: img1,
+      title: "Restaurant webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+    {
+      id: 2,
+      img: img2,
+      title: "Courses webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+    {
+      id: 3,
+      img: img3,
+      title: "Shopping app webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+    {
+      id: 4,
+      img: img4,
+      title: "Gym webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+    {
+      id: 5,
+      img: img5,
+      title: "Night club webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+    {
+      id: 6,
+      img: img6,
+      title: "Delivery webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+    {
+      id: 7,
+      img: img7,
+      title: "Yoga webservice",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, praesentium?",
+    },
+  ];
+
+  const leftProjects = projects.slice(0, 2);
+  const rightProjects = projects.slice(2, 4);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <>
       <section className={s.section} id="section-work">
@@ -28,73 +79,70 @@ const Projects = () => {
             </p>
           </div>
           <ul className={s.list}>
-            <li className={s.item}>
-              <img
-                className={s.img}
-                src={img1}
-                alt="restaurant webservice image"
-                width="680"
-                height="390"
-              ></img>
-              <h3 className={s.itemTitle}>Restaurant webservice</h3>
-              <p className={s.itemText}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, praesentium?
-              </p>
-            </li>
-            <li className={s.item}>
-              <img
-                className={s.img}
-                src={img2}
-                alt="Language courses webservice image"
-                width="680"
-                height="390"
-              ></img>
-              <h3 className={s.itemTitle}>Courses webservice</h3>
-              <p className={s.itemText}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, praesentium?
-              </p>
-            </li>
+            {leftProjects.map((projects) => (
+              <li className={s.item} key={projects.id}>
+                <img
+                  className={s.img}
+                  src={projects.img}
+                  alt={projects.title}
+                  width="680"
+                  height="390"
+                ></img>
+                <h3 className={s.itemTitle}>{projects.title}</h3>
+                <p className={s.itemText}>{projects.text}</p>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className={s.rightContainer}>
           <ul className={s.list}>
-            <li className={s.item}>
-              <img
-                className={s.img}
-                src={img3}
-                alt="Shopping time webservice image"
-                width="680"
-                height="390"
-              ></img>
-              <h3 className={s.itemTitle}>Shopping app webservice</h3>
-              <p className={s.itemText}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, praesentium?
-              </p>
-            </li>
-            <li className={s.item}>
-              <img
-                className={s.img}
-                src={img4}
-                alt="gym webservice image"
-                width="680"
-                height="390"
-              ></img>
-              <h3 className={s.itemTitle}>Gym webservice</h3>
-              <p className={s.itemText}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, praesentium?
-              </p>
-            </li>
+            {rightProjects.map((projects) => (
+              <li className={s.item} key={projects.id}>
+                <img
+                  className={s.img}
+                  src={projects.img}
+                  alt={projects.title}
+                  width="680"
+                  height="390"
+                ></img>
+                <h3 className={s.itemTitle}>{projects.title}</h3>
+                <p className={s.itemText}>{projects.text}</p>
+              </li>
+            ))}
           </ul>
           <div className={s.btnContainer}>
-            <button className={s.btn}>view all projects</button>
+            <button className={s.btn} onClick={openModal}>
+              view all projects
+            </button>
           </div>
         </div>
       </section>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="All Projects"
+        className={s.modal}
+        overlayClassName={s.overlay}
+      >
+        <h2 className={s.modalTitle}>All Projects</h2>
+        <ul className={s.modalList}>
+          {projects.map((project) => (
+            <li className={s.modalItem} key={project.id}>
+              <img
+                className={s.modalImg}
+                src={project.img}
+                alt={project.title}
+              ></img>
+              <h3 className={s.modalText}>{project.title}</h3>
+            </li>
+          ))}
+        </ul>
+        <button className={s.btnClose} onClick={closeModal}>
+          close
+        </button>
+      </Modal>
     </>
   );
 };
