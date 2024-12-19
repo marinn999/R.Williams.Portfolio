@@ -17,15 +17,50 @@ const Footer = () => {
               </svg>
             </a>
             <div className={s.iconsContainer}>
-              <svg className={s.icon} width="24" height="24">
-                <use href="symbol-defs.svg#icon-Twitter"></use>
-              </svg>
-              <svg className={s.icon} width="24" height="24">
-                <use href="symbol-defs.svg#icon-Dribbble"></use>
-              </svg>
-              <svg className={s.icon} width="24" height="24">
-                <use href="symbol-defs.svg#icon-LinkedIn"></use>
-              </svg>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  className={s.icon}
+                  width="24"
+                  height="24"
+                  aria-label="Twitter icon"
+                >
+                  <use href="symbol-defs.svg#icon-Twitter"></use>
+                </svg>
+              </a>
+
+              <a
+                href="https://dribbble.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  className={s.icon}
+                  width="24"
+                  height="24"
+                  aria-label="Twitter icon"
+                >
+                  <use href="symbol-defs.svg#icon-Dribbble"></use>
+                </svg>
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  className={s.icon}
+                  width="24"
+                  height="24"
+                  aria-label="Twitter icon"
+                >
+                  <use href="symbol-defs.svg#icon-LinkedIn"></use>
+                </svg>
+              </a>
             </div>
           </div>
           <div className={s.footerRight}>

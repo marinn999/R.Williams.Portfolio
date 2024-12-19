@@ -44,21 +44,15 @@
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
-  /* 27px */
   text-transform: uppercase;
   border: 1px solid var(--Purple, #5221e6);
   background-color: transparent;
 }
 
-.btn:first-child {
+.active {
   border: 1px solid var(--Purple, #5221e6);
   background: var(--Purple, #5221e6);
-}
-
-.btn:focus,
-.btn:hover {
-  border: 1px solid var(--Purple, #5221e6);
-  background: var(--Purple, #5221e6);
+  color: var(--White, #fff);
 }
 
 .imgs {
@@ -89,10 +83,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-
+  /* 
   .btn {
     width: normal;
-  }
+  } */
 }
 
 /* =============================  /PHOTOGRAPHY TABLET STYLES ========================== */

@@ -10,6 +10,7 @@ import Reviews from "./components/Reviews/Reviews";
 import Skillset from "./components/Skillset/Skillset";
 import SkillsetIcons from "./components/SkillsetIcons/SkillsetIcons";
 import { Work } from "./components/Work/Work";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const handleSubmitForm = (values) => {
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Header />
+      <Toaster />
       <Hero />
       <Work />
       <Philosophy />

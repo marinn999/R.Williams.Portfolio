@@ -1,11 +1,29 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import s from "./LetsGetStarted.module.css";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import * as Yup from "yup";
 
 const LetsGetStarted = ({ handleSubmitForm }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const handleModalClose = () => setModalOpen(false);
+
+  const CheckSchema = Yup.object().shape({
+    name: Yup.string()
+      .trim("Name cannot contain only spaces.")
+      .min(2, "Name is too short.")
+      .max(25, "Name is too long.")
+      .required("Name is required."),
+    email: Yup.string()
+      .email("Invalid email address.")
+      .trim("Email cannot contain only spaces.")
+      .required("Email is required."),
+    message: Yup.string()
+      .min(10, "Message is too short.")
+      .trim("Message cannot contain only spaces.")
+      .required("Message is required."),
+  });
+
   return (
     <>
       <section className={s.section} id="section-contact">
@@ -19,55 +37,60 @@ const LetsGetStarted = ({ handleSubmitForm }) => {
 
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
+          validationSchema={CheckSchema}
           onSubmit={(values, options) => {
-            console.log("submitted vals", values);
-
-            const { name, email, message } = values;
-            // Перевірка на порожні поля
-            if (!name.trim() || !email.trim() || !message.trim()) {
-              toast.error("All fields are required. Please fill them out.");
-              return;
-            }
             // Передача даних форми через handleSubmitForm у App
             handleSubmitForm(values);
-            // Показуємо модальне вікно
             setModalOpen(true);
-            // Очищення форми
             options.resetForm();
           }}
         >
           <Form className={s.rightContainer}>
             <label className={s.label} htmlFor="name">
-              Name
+              Name{" "}
+              <Field
+                type="text"
+                name="name"
+                autoComplete="off"
+                className={s.input}
+                required
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className={s.errorMessage}
+              />{" "}
             </label>
-            <Field
-              type="text"
-              name="name"
-              autoComplete="off"
-              autoFocus
-              className={s.input}
-              required
-            />
             <label className={s.label} htmlFor="email">
               Email
+              <Field
+                type="email"
+                name="email"
+                autoComplete="off"
+                className={s.input}
+                required
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className={s.errorMessage}
+              />{" "}
             </label>
-            <Field
-              type="email"
-              name="email"
-              autoComplete="off"
-              className={s.input}
-              required
-            />
             <label className={s.label} htmlFor="message">
               Message
+              <Field
+                as="textarea"
+                name="message"
+                autoComplete="off"
+                className={s.comment}
+                required
+              />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className={s.errorMessage}
+              />{" "}
             </label>
-            <Field
-              as="textarea"
-              name="message"
-              autoComplete="off"
-              className={s.comment}
-              required
-            />
             <button className={s.btn} type="submit">
               Let’s get started
             </button>
@@ -85,6 +108,10 @@ const LetsGetStarted = ({ handleSubmitForm }) => {
                 <svg
                   className={s.modalCloseBtnIcon}
                   aria-label="close modal icon"
+                  stroke="black"
+                  fill="none"
+                  width="24"
+                  height="24"
                 >
                   <use href="symbol-defs.svg#icon-close"></use>
                 </svg>
