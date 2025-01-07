@@ -54,11 +54,11 @@ const Header = () => {
             contentLabel="Menu"
             className={s.menu}
             overlayClassName={s.overlay}
-            closeTimeoutMS={300}
+            closeTimeoutMS={500}
           >
             <div className={s.modalHeader}>
               <button className={s.modalCloseBtn} onClick={closeMobileMenu}>
-                Close
+                x
               </button>
               <ul className={s.modalList}>
                 <li className={s.modalItem} onClick={handleMenuClick}>

@@ -78,6 +78,7 @@ const Photography = () => {
         <div className={s.imgs}>
           {visibleImgs.map((src, id) => (
             <img
+              className={s.img}
               key={id}
               src={src}
               alt={`Image ${id + 1}`}

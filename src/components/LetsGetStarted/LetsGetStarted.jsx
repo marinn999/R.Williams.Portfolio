@@ -1,7 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import s from "./LetsGetStarted.module.css";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
 import * as Yup from "yup";
 
 const LetsGetStarted = ({ handleSubmitForm }) => {
@@ -126,7 +125,6 @@ const LetsGetStarted = ({ handleSubmitForm }) => {
             </div>
           </div>
         )}
-        <Toaster />
       </section>
     </>
   );

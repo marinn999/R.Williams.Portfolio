@@ -12,9 +12,7 @@
 .title {
   color: var(--White, #fff);
   width: 320px;
-  font-family: Sen;
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
@@ -24,23 +22,11 @@
   width: 320px;
   margin-top: 16px;
   margin-bottom: 40px;
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  /* 27px */
 }
 
 .link {
   color: var(--White, #fff);
-  font-family: Sen;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  /* 24px */
-
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 1px;
@@ -54,42 +40,36 @@
 }
 
 .itemTextContainer {
-  padding: 32px;
-  width: 333px;
+  padding: 16px;
+  width: 100%;
   border: 1px solid var(--Dark-Grey, #5b6876);
+  margin-top: -1px;
+  box-sizing: border-box;
 }
 
 .itemText {
   color: var(--White, #fff);
-  width: 269px;
-  font-family: Sen;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
-  /* 36px */
+  font-size: 20px;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 64px;
 }
 
 .itemTextWho {
   color: var(--Dark-Grey, #5b6876);
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 150%;
-  /* 27px */
 }
 
 .itemTextCompany {
   color: var(--Dark-Grey, #5b6876);
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  /* 27px */
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* =============================  /Reviews MOBILE STYLES ========================== */
@@ -112,12 +92,25 @@
   }
 
   .text {
-    width: 332px;
     margin-top: 24px;
   }
 
   .list {
-    gap: 64px;
+    gap: 24px;
+  }
+  .img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  .itemTextContainer {
+    width: 100%; /* Зберігаємо прив'язку до ширини зображення */
+    padding: 24px;
+  }
+  .itemText {
+    font-size: 24px;
+    font-weight: 700;
   }
 }
 
@@ -125,39 +118,37 @@
 
 /* =============================  Reviews DESKTOP STYLES ========================== */
 @media screen and (min-width: 1158px) {
-  .reviews-section-desktop-img {
-    display: block;
-    width: 100%;
-  }
-
   .section {
-    gap: 72px;
+    gap: 24px;
     padding: 120px 72px;
   }
 
-  .title {
-    width: 588px;
-  }
-
+  .title,
   .text {
-    width: 588px;
+    width: 500px;
   }
 
   .list {
-    gap: 120px;
+    gap: 36px;
   }
   .item {
     width: 760px;
   }
 
   .itemTextContainer {
-    padding: 61px;
-    width: 636px;
+    padding: 36px;
+    width: 100%; /* Зберігаємо прив'язку до ширини зображення */
   }
 
   .itemText {
-    width: 508px;
     line-height: normal;
+  }
+
+  .img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
   }
 
   .modal {
@@ -205,7 +196,6 @@
   }
 
   .modalTitle {
-    font-family: Sen, sans-serif;
     font-size: 26px;
     text-align: center;
     padding-bottom: 10px;

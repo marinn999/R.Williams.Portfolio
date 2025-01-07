@@ -1,48 +1,46 @@
 /* =============================  Insta MOBILE STYLES ========================== */
 
-.img {
+/* .img {
   width: 100%;
   object-fit: cover;
   object-position: center;
+} */
+.img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .leftContainer {
   background: var(--Violet-Accent, #fbe4ff);
-  padding: 48px 20px;
+  padding: 48px 20px 0 20px;
+  min-height: 350px;
 }
 
 .title {
   color: var(--Level-1, #181823);
-  font-family: Sen;
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
 .text {
   color: var(--Dark-grey, #5b6876);
-  margin-top: 16px;
-
-  margin-bottom: 100px;
-
+  padding-top: 24px;
+  padding-bottom: 24px;
   width: 320px;
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
 }
 
 .link {
   display: inline-block;
   position: relative;
   color: var(--Level-1, #181823);
-  font-family: Sen;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
   padding-bottom: 5px;
 }
 
@@ -61,12 +59,17 @@
 /* =============================  Insta TABLET STYLES========================== */
 @media screen and (min-width: 768px) {
   .section {
-    display: flex;
     flex-direction: row;
   }
-
+  .img {
+    width: 50%;
+    object-fit: cover;
+    object-position: center center;
+  }
   .leftContainer {
-    padding: 80px 40px;
+    padding-top: 80px;
+    min-height: 600px;
+    width: 50%;
   }
 
   .title {
@@ -75,9 +78,9 @@
 
   .text {
     width: 304px;
-    margin-top: 24px;
-
-    margin-bottom: 133px;
+  }
+  .link {
+    margin-top: 100px;
   }
 }
 
@@ -86,10 +89,16 @@
 /* =============================  Insta DESKTOP STYLES ========================== */
 @media screen and (min-width: 1158px) {
   .leftContainer {
-    padding: 120px 72px;
+    padding-top: 120px;
+    padding-left: 80px;
+    height: auto;
   }
 
+  .title {
+    width: 100%;
+  }
   .text {
     width: 576px;
+    line-height: 1.8;
   }
 }

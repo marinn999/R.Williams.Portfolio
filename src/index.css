@@ -32,38 +32,6 @@ img {
 }
 
 @font-face {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/fonts/Raleway-Bold.woff2") format("woff2"),
-    url("/fonts/Raleway-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2"),
-    url("/fonts/Roboto-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 500;
-  font-style: normal;
-  src: url("/fonts/Roboto-Medium.woff2") format("woff2"),
-    url("/fonts/Roboto-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/fonts/Roboto-Bold.woff2") format("woff2"),
-    url("/fonts/Roboto-Bold.woff") format("woff");
-}
-
-@font-face {
   font-family: "Sen";
   font-weight: 400;
   font-style: normal;
@@ -77,4 +45,11 @@ img {
   font-style: normal;
   src: url("/fonts/Sen-Bold.woff2") format("woff2"),
     url("/fonts/Sen-Bold.woff") format("woff");
+}
+body {
+  font-family: "Sen", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
 }

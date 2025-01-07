@@ -5,16 +5,11 @@
   flex-direction: column;
   padding: 48px 20px;
   justify-content: flex-start;
-
   gap: 48px;
 }
-/* .leftContainer {
-  display: flex;
-  flex-direction: column;
-} */
+
 .title {
   color: var(--White, #fff);
-  font-family: Sen;
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -24,11 +19,6 @@
   color: var(--Light-Grey, #8491a0);
   margin-top: 16px;
   width: 320px;
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
 }
 
 .label {
@@ -36,16 +26,13 @@
   flex-direction: column;
   gap: 8px;
   color: var(--White, #fff);
-  font-family: Sen;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 150%;
   margin-bottom: 40px;
 }
 
 .input,
 .comment {
-  width: 332px;
+  width: 300px;
   height: 50px;
   background: var(--Level-1, #181823);
   border: none;
@@ -67,18 +54,14 @@
 }
 .btn {
   display: block;
-  width: 332px;
+  width: 364px;
   padding: 24px 32px;
   flex-direction: column;
   align-items: center;
   background: var(--Purple, #5221e6);
   border: none;
   color: var(--White, #fff);
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 150%;
   text-transform: uppercase;
   flex-grow: 1;
 }
@@ -143,28 +126,26 @@
   .section {
     flex-direction: row;
     padding: 80px 40px;
-    gap: 224px;
+    gap: 24px;
   }
 
   .title {
     font-size: 55px;
+    width: 300px;
   }
 
   .text {
     margin-top: 24px;
-    width: 332px;
+    width: 300px;
   }
 
-  .input {
-    width: 332px;
-  }
-
+  .input,
   .comment {
-    width: 332px;
+    width: 300px;
   }
 
   .btn {
-    width: 332px;
+    width: 364px;
   }
 }
 
@@ -175,7 +156,9 @@
   .section {
     padding: 120px 182px;
   }
-
+  .title {
+    width: 526px;
+  }
   .text {
     width: 526px;
   }

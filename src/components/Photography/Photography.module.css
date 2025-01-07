@@ -6,60 +6,56 @@
 
 .title {
   color: var(--White, #fff);
-  font-family: Sen;
   font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
   line-height: normal;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .text {
   color: var(--Light-Grey, #8491a0);
-  width: 320px;
-  margin-top: 24px;
-  margin-bottom: 40px;
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  /* 27px */
+  margin-bottom: 32px;
 }
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
 }
 
 .btn {
   display: flex;
   width: 148px;
-  padding: 12px 16px;
+  padding: 8px 16px;
+  font-size: 16px;
   align-items: center;
   justify-content: center;
   color: var(--White, #fff);
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 150%;
   text-transform: uppercase;
   border: 1px solid var(--Purple, #5221e6);
   background-color: transparent;
 }
 
-.active {
-  border: 1px solid var(--Purple, #5221e6);
-  background: var(--Purple, #5221e6);
-  color: var(--White, #fff);
+.btn:hover,
+.btn:focus,
+.btn.active {
+  background-color: #5221e6;
 }
 
 .imgs {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /* =============================  /PHOTOGRAPHY MOBILE STYLES ========================== */
@@ -76,17 +72,28 @@
 
   .text {
     width: 689px;
-    margin-bottom: 64px;
+    margin-bottom: 40px;
+    font-size: 20px;
   }
 
   .imgs {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
-  /* 
+  .img {
+    border-radius: 8px;
+  }
+
+  .buttons {
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+
   .btn {
-    width: normal;
-  } */
+    padding: 12px 16px;
+    font-size: 18px;
+  }
 }
 
 /* =============================  /PHOTOGRAPHY TABLET STYLES ========================== */
@@ -99,9 +106,19 @@
 
   .text {
     width: 588px;
+    margin-bottom: 64px;
   }
-
+  .buttons {
+    justify-content: flex-start;
+    margin-bottom: 64px;
+  }
   .imgs {
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
   }
 }

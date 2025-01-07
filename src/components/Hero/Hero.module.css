@@ -18,11 +18,8 @@
 .title {
   width: 320px;
   color: var(--White, #fff);
-  font-family: Sen;
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .titleSpan {
@@ -32,11 +29,6 @@
 .text {
   width: 320px;
   color: var(--White, #fff);
-  font-family: Sen;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
 }
 
 /* ========================== /MOBILE HERO STYLES======================== */
@@ -93,7 +85,6 @@
   .title {
     width: 738px;
     font-size: 78px;
-    line-height: normal;
   }
 
   .text {
