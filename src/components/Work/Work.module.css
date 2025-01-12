@@ -101,25 +101,39 @@
 /* ============= EXPERIENCE DESKTOP STYLES =============== */
 @media screen and (min-width: 1158px) {
   .section {
-    padding: 120px 72px;
+    padding: 120px 40px;
   }
 
   .companiesTitle {
     width: 690px;
   }
 
-  .list {
-    gap: 72px;
-  }
-
   .companyName {
     margin-bottom: 22px;
-    width: 368px;
+    width: 348px;
+  }
+
+  .list {
+    gap: 8px;
+    justify-content: space-between;
+    margin-right: 40px;
   }
 
   .companyDescription {
-    width: 368px;
+    width: 340px;
   }
 }
+@media screen and (min-width: 1300px) {
+  .section {
+    padding: 120px 72px;
+  }
 
+  .list {
+    gap: 16px;
+  }
+
+  .companyDescription {
+    width: 348px;
+  }
+}
 /* ============= /EXPERIENCE DESKTOP STYLES =============== */

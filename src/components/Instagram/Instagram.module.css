@@ -1,15 +1,10 @@
 /* =============================  Insta MOBILE STYLES ========================== */
-
-/* .img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
 .img {
   width: 100%;
   height: auto;
   max-width: 100%;
 }
+
 .section {
   display: flex;
   flex-direction: column;
@@ -61,11 +56,13 @@
   .section {
     flex-direction: row;
   }
+
   .img {
     width: 50%;
     object-fit: cover;
     object-position: center center;
   }
+
   .leftContainer {
     padding-top: 80px;
     min-height: 600px;
@@ -79,6 +76,7 @@
   .text {
     width: 304px;
   }
+
   .link {
     margin-top: 100px;
   }
@@ -90,15 +88,25 @@
 @media screen and (min-width: 1158px) {
   .leftContainer {
     padding-top: 120px;
-    padding-left: 80px;
+    padding-left: 60px;
     height: auto;
   }
 
   .title {
     width: 100%;
   }
+
+  .text {
+    width: 480px;
+    line-height: 1.8;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .leftContainer {
+    padding-left: 80px;
+  }
+
   .text {
     width: 576px;
-    line-height: 1.8;
   }
 }

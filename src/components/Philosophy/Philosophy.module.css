@@ -76,6 +76,7 @@
   .text {
     width: 304px;
   }
+
   .link {
     margin-top: 100px;
   }
@@ -87,12 +88,23 @@
 @media screen and (min-width: 1158px) {
   .textContainer {
     padding-top: 120px;
-    padding-left: 80px;
+    padding-left: 60px;
     height: auto;
   }
 
   .title {
     width: 100%;
+  }
+
+  .text {
+    width: 480px;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .textContainer {
+    padding-left: 80px;
   }
 
   .text {

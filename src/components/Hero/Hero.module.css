@@ -1,5 +1,4 @@
 /* ========================== MOBILE HERO STYLES======================== */
-
 .img {
   max-width: 100%;
   height: auto;
@@ -8,6 +7,7 @@
 .section {
   background-color: #000000;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -76,18 +76,40 @@
     background-position: right;
     justify-content: flex-start;
   }
+}
+
+/* ========================== CUSTOM BREAKPOINTS ========================= */
+@media screen and (min-width: 1059px) and (max-width: 1410px) {
+  .section {
+    justify-content: flex-start;
+  }
+
   .container {
-    margin-left: 662px;
+    margin-left: 500px;
+    margin-top: 120px;
+    gap: 32px;
+  }
+
+  .title {
+    width: 600px;
+    font-size: 64px;
+  }
+
+  .text {
+    width: 576px;
+    padding-left: 0px;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1410px) {
+  .container {
+    margin-left: 620px;
     margin-top: 141px;
     gap: 32px;
   }
 
   .title {
-    width: 738px;
-    font-size: 78px;
-  }
-
-  .text {
-    width: 738px;
+    width: 732px;
+    font-size: 74px;
   }
 }

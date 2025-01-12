@@ -36,7 +36,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 36px;
 }
 
 .itemTextContainer {
@@ -53,6 +53,7 @@
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 64px;
+  line-height: normal;
 }
 
 .itemTextWho {
@@ -70,6 +71,126 @@
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(170, 167, 167);
+  padding: 0;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+.modalList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  top: 0;
+}
+.modalHeader {
+  position: sticky;
+  top: 0;
+  background-color: rgb(170, 167, 167);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 3px solid #5221e6;
+}
+
+.modalTitle {
+  font-size: 26px;
+  text-align: center;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.modalCloseBtn {
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #5221e6;
+  font-weight: bold;
+}
+
+.modalCloseBtn:hover::after,
+.modalCloseBtn:focus::after,
+.modalCloseBtn:active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  margin-bottom: 10px;
+  background-color: #5221e6;
+}
+
+.modalTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #5221e6;
+}
+
+.modalItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  margin-top: 10px;
+  width: 100%;
+  height: 1px;
+  background-color: #5221e6;
+}
+
+.modalImg {
+  border-radius: 50%;
+}
+
+.modalItemTextWho {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modalItemTextCompany {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.modalContainer {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 16px;
+}
+
+.modalTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
 }
 
 /* =============================  /Reviews MOBILE STYLES ========================== */
@@ -121,18 +242,22 @@
   .section {
     gap: 24px;
     padding: 120px 72px;
+    margin: 0 auto;
   }
 
   .title,
   .text {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
   }
 
   .list {
     gap: 36px;
   }
+
   .item {
-    width: 760px;
+    width: 100%;
+    max-width: 760px;
   }
 
   .itemTextContainer {
@@ -148,118 +273,7 @@
     width: 100%;
     border-radius: 16px;
     object-fit: cover;
+    max-width: 760px;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(170, 167, 167);
-    padding: 0;
-    border-radius: 10px;
-    max-width: 90%;
-    max-height: 90%;
-    overflow-y: auto;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 1000;
-  }
-  .modalList {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 0;
-    padding: 20px;
-    list-style: none;
-    top: 0;
-  }
-  .modalHeader {
-    position: sticky;
-    top: 0;
-    background-color: rgb(170, 167, 167);
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 3px solid #5221e6;
-  }
-
-  .modalTitle {
-    font-size: 26px;
-    text-align: center;
-    padding-bottom: 10px;
-    position: relative;
-  }
-
-  .modalCloseBtn {
-    font-size: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #5221e6;
-    font-weight: bold;
-  }
-  .modalCloseBtn:hover::after,
-  .modalCloseBtn:focus::after,
-  .modalCloseBtn:active::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 80px;
-    height: 3px;
-    margin-bottom: 10px;
-    background-color: #5221e6;
-  }
-  .modalTitle::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #5221e6;
-  }
-  .modalItem::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    margin-top: 10px;
-    width: 100%;
-    height: 1px;
-    background-color: #5221e6;
-  }
-  .modalImg {
-    border-radius: 50%;
-  }
-  .modalItemTextWho {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .modalItemTextCompany {
-    font-size: 16px;
-    font-style: italic;
-  }
-  .modalContainer {
-    display: flex;
-    gap: 30px;
-    padding-bottom: 16px;
-  }
-  .modalTextContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-top: 20px;
   }
 }

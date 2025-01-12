@@ -81,6 +81,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
+
   .img {
     border-radius: 8px;
   }
@@ -108,13 +109,16 @@
     width: 588px;
     margin-bottom: 64px;
   }
+
   .buttons {
     justify-content: flex-start;
     margin-bottom: 64px;
   }
+
   .imgs {
     grid-template-columns: repeat(4, 1fr);
   }
+
   .img {
     max-width: 100%;
     height: auto;
